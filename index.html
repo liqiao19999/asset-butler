@@ -3,7 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>有底 · 资产管家 · 交互原型</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjFGMjYiLz4KICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwQyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkU4QTAiLz4KICAgIDxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjRjBDMjRFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEOTk0MjAiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdyIgY3g9IjAuNSIgY3k9IjAuNDYiIHI9IjAuNiI+CiAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9InJnYmEoMjQwLDE5NCw3OCwuMTgpIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9InJnYmEoMjQwLDE5NCw3OCwwKSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgcng9IjIyNCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgcng9IjIyNCIgZmlsbD0idXJsKCNnbG93KSIvPgo8cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSI5OTYiIGhlaWdodD0iOTk2IiByeD0iMjEyIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjQwLDE5NCw3OCwuMjYpIiBzdHJva2Utd2lkdGg9IjQiLz4KPHBhdGggZD0iTSAyNTAgNTAwIEMgMjUwIDc1MCA3NzQgNzUwIDc3NCA1MDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSI1OCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0gMzMwIDYxOCBMIDQ2OCA1MjAgTCA1NjYgNTY2IEwgNzE2IDM4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjQ2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNzE2IiBjeT0iMzg4IiByPSIzMCIgZmlsbD0iI0ZGRTlBOCIvPgo8L3N2Zz4K">
+<meta name="theme-color" content="#0A0B0D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="有底">
+<title>有底 · 资产管家</title>
 <style>
 :root{
   --bg:#0A0B0D; --surface:#141619; --surface2:#1B1E23; --surface3:#22262C;
@@ -15,41 +20,17 @@
 *{box-sizing:border-box;-webkit-font-smoothing:antialiased}
 html,body{margin:0;height:100%}
 body{
-  background:radial-gradient(1200px 600px at 50% -10%,#14161A 0%,#07080A 60%);
+  background:var(--bg);
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-  color:var(--text);display:flex;flex-direction:column;align-items:center;
-  padding:28px 20px 60px;gap:20px;min-height:100vh;
+  color:var(--text);min-height:100vh;overflow:hidden;
 }
-.stage-head{width:100%;max-width:860px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.brand{font-size:13px;color:var(--muted);letter-spacing:.08em}
-.brand b{color:var(--text);font-weight:500;letter-spacing:0}
-.switcher{display:flex;gap:6px;flex-wrap:wrap}
-.switcher button{
-  background:var(--surface);border:1px solid var(--line);color:var(--muted);
-  font-size:12px;padding:6px 11px;border-radius:999px;cursor:pointer;font-family:inherit;
-  transition:.18s;
-}
-.switcher button:hover{color:var(--text);border-color:var(--line2)}
-.switcher button.on{background:var(--gold);border-color:var(--gold);color:#17140A;font-weight:500}
-
 .phone{
-  position:relative;width:390px;height:844px;border-radius:46px;background:var(--bg);
-  border:1px solid rgba(255,255,255,.1);overflow:hidden;flex:0 0 auto;
-  box-shadow:0 40px 100px -20px rgba(0,0,0,.9),0 0 0 8px #101215;
+  position:relative;width:100vw;height:100vh;height:100dvh;background:var(--bg);
+  overflow:hidden;
 }
-.statusbar{
-  position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;
-  justify-content:space-between;padding:0 26px;font-size:13px;font-weight:500;z-index:30;
-  color:var(--text);pointer-events:none;
-  /* 内容滚到顶时压一层底色,状态栏才不会和正文叠在一起 */
-  background:linear-gradient(180deg,rgba(10,11,13,.97) 0%,rgba(10,11,13,.92) 58%,rgba(10,11,13,0) 100%);
-}
-.statusbar .dots{display:flex;gap:4px;align-items:center}
-.statusbar i{display:block;width:14px;height:9px;border:1px solid var(--text);border-radius:2px;opacity:.85}
-
 main{position:absolute;inset:0}
 .screen{
-  position:absolute;inset:0;padding:52px 0 92px;overflow-y:auto;overflow-x:hidden;
+  position:absolute;inset:0;padding:24px 0 92px;overflow-y:auto;overflow-x:hidden;
   display:none;scrollbar-width:none;
 }
 .screen::-webkit-scrollbar{display:none}
@@ -358,7 +339,6 @@ main{position:absolute;inset:0}
 .catgrid .cat .e{display:block;font-size:17px;margin-bottom:5px}
 .catgrid .cat.on{background:var(--gold-dim);border-color:rgba(240,194,78,.45);color:var(--gold)}
 
-.hint{font-size:11px;color:var(--dim);line-height:1.7;text-align:center;max-width:420px}
 
 /* v0.2.0 新增:状态筛选 / 表单弹层 / 开关 / 统计 */
 .chiprow{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 0 10px}
@@ -960,37 +940,7 @@ mark{background:rgba(240,194,78,.22);color:var(--gold);border-radius:2px;padding
 </head>
 <body>
 
-<div class="stage-head">
-  <div class="brand"><b>有底</b> · 资产管家 · 交互原型 vZC001.013</div>
-  <div class="switcher">
-    <button data-go="home" class="on">首页</button>
-    <button data-go="flow">流水</button>
-    <button data-go="assets">资产</button>
-    <button data-go="accounts">账户</button>
-    <button data-go="budget">预算</button>
-    <button data-go="plans">分期</button>
-    <button data-go="books">账本</button>
-    <button data-go="close">结算</button>
-    <button data-go="year">年报</button>
-    <button data-go="family">家庭</button>
-    <button data-go="search">搜索</button>
-    <button data-go="recon">对账</button>
-    <button data-go="item">物品详情</button>
-    <button data-go="card">卡券详情</button>
-    <button data-go="calendar">日历</button>
-    <button data-go="empty">空状态</button>
-  </div>
-</div>
-
 <div class="phone">
-  <div class="statusbar">
-    <span>21:08</span>
-    <span class="dots">
-      <svg width="16" height="11" viewBox="0 0 16 11" fill="none"><path d="M1 3.4a10 10 0 0 1 14 0M3.8 6.2a6 6 0 0 1 8.4 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="9.2" r="1.1" fill="currentColor"/></svg>
-      <svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.6" y="0.6" width="18" height="9.8" rx="2.6" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="2.2" y="2.2" width="12" height="6.6" rx="1.4" fill="currentColor"/><path d="M20.4 4v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".55"/></svg>
-    </span>
-  </div>
-
   <main>
     <!-- ================= 首页 ================= -->
     <section class="screen active" id="home">
@@ -1540,78 +1490,6 @@ mark{background:rgba(240,194,78,.22);color:var(--gold);border-radius:2px;padding
       </div>
     </section>
 
-    <!-- ================= 空状态走查 ================= -->
-    <section class="screen" id="empty">
-      <div class="hd"><h1>空状态</h1>
-        <div class="acts"><span style="font-size:11px;color:var(--dim)">v0.0.2 走查</span></div>
-      </div>
-      <div class="wrap">
-        <div style="font-size:11px;color:var(--dim);line-height:1.8;margin-bottom:6px">
-          空状态不是装饰。每个都必须回答两件事：<b style="color:var(--muted);font-weight:400">这里为什么是空的</b>、<b style="color:var(--muted);font-weight:400">我下一步该做什么</b>。只写「暂无数据」的，等于在告诉用户可以卸载了。
-        </div>
-
-        <div class="sec-title"><h2>① 首页 · 今天没有待办</h2><span>不能空着</span></div>
-        <div class="card todo">
-          <div class="t"><span>今天 0 件事</span></div>
-          <div class="empty" style="padding:16px 0 4px">
-            <div class="ei">🌤</div>
-            <div class="et">没有要付的钱，也没有要过期的权益</div>
-            <div class="es">下次提醒 · 按你设置的日期推送</div>
-          </div>
-        </div>
-
-        <div class="sec-title"><h2>② 流水 · 这天没有记录</h2><span>删完最后一笔后</span></div>
-        <div class="card">
-          <div class="empty">
-            <div class="ei">🧾</div>
-            <div class="et">这天没有记录</div>
-            <div class="es">没花钱也是一条信息，但不用勉强记</div>
-            <div class="ea" onclick="openSheet('')">补记一笔</div>
-          </div>
-        </div>
-
-        <div class="sec-title"><h2>③ 资产 · 还没有实物资产</h2><span>新用户</span></div>
-        <div class="card">
-          <div class="empty">
-            <div class="ei">📦</div>
-            <div class="et">还没有建档的物品</div>
-            <div class="es">拍一张照片，自己带出名称和分类<br>只要名称、价格、日期三个字段就能算日均成本</div>
-            <div class="ea" onclick="toast('打开相机 · 拍一张建档')">拍一张建档</div>
-          </div>
-        </div>
-
-        <div class="sec-title"><h2>④ 日历 · 这天没有安排</h2><span>最常见的一屏</span></div>
-        <div class="card">
-          <div class="empty">
-            <div class="ei">📅</div>
-            <div class="et">这天没有安排</div>
-            <div class="es">还款、续费、作废日会自动出现在这里</div>
-            <div class="ea" onclick="toast('新建一条提醒')">手动加一条</div>
-          </div>
-        </div>
-
-        <div class="sec-title"><h2>⑤ 卡券 · 权益用完了</h2><span>最好的结局</span></div>
-        <div class="card">
-          <div class="empty">
-            <div class="ei">✅</div>
-            <div class="et">权益已经全部用完</div>
-            <div class="es">这张卡已经回本了，到期别续<br>回本率 100%，不续就是省钱</div>
-            <div class="ea" onclick="toast('已加入「该退清单」')">标记为不续</div>
-          </div>
-        </div>
-
-        <div class="sec-title"><h2>⑥ 新用户 · 净值还是 0</h2><span>首次打开</span></div>
-        <div class="card">
-          <div class="empty">
-            <div class="ei">🏦</div>
-            <div class="et">还没有账户</div>
-            <div class="es">从一个余额开始就够，1 分钟建好<br>之后每加一个账户，净值就准一分</div>
-            <div class="ea" onclick="toast('添加第一个账户')">添加第一个账户</div>
-          </div>
-        </div>
-        <div style="height:44px"></div>
-      </div>
-    </section>
     <!-- ================= 账单导入 ================= -->
     <section class="screen detail" id="import">
       <div class="hd">
@@ -1779,7 +1657,7 @@ mark{background:rgba(240,194,78,.22);color:var(--gold);border-radius:2px;padding
       <div class="acct">账户
         <select id="sheetAcct" class="pill" style="appearance:none;outline:none;cursor:pointer"></select>
         <span style="margin-left:-14px;font-size:9px;color:var(--dim);pointer-events:none">▾</span>
-        <span style="margin-left:auto;color:var(--dim)">今天 21:08</span>
+        <span id="sheetNow" style="margin-left:auto;color:var(--dim)"></span>
       </div>
       <div class="keys">
         <button onclick="key('7')">7</button><button onclick="key('8')">8</button><button onclick="key('9')">9</button>
@@ -1881,8 +1759,6 @@ mark{background:rgba(240,194,78,.22);color:var(--gold);border-radius:2px;padding
   <div class="toast" id="toast"></div>
 </div>
 
-<div class="hint"><b style="color:var(--muted);font-weight:400">页面上任何一行都能点开编辑</b> · 首页点净资产进「账户与净值」· 账户页可还款 / 充值 / 还房贷（都不进支出）· 记一笔可分支出与收入，点金额后的「CNY」可换币种，选期数即成分期 · 分期页可入账一期 / 提前结清 / 改按全款记 · 流水左滑改分类 / 删除（分期那条不能滑，去计划里动）· 流水页右上「导入」可导入微信 / 支付宝账单 · 流水 / 预算 / 日历都能翻月 · 日历点某天可加提醒 · 首页「接下来 N 件事」点左边的圈就算办完，日历当天会多一条已办 · 流水页右上放大镜或我的 →「搜索流水」可跨月搜商户 / 分类 / 金额（输 &gt;500 找大额）· 账户页「对账」可核账面与银行 · 我的 →「家庭共享」可改角色与账户权限，右上角人头切成小雅的视角，看同一本账怎么变成两个数</div>
-
 <script>
 let cur = 'home', amt = '', lastTag = '';
 
@@ -1945,7 +1821,7 @@ const mkMini = k => (mkY(k) === 2026 ? mkM(k) : mkY(k) + '.' + mkM(k)) + ' 月';
 const ARCHIVE = {};   // [vZC001.013] 归档数据已清空
 /* 归档月的预算:10 月定过,而且超了 —— 11 月才把餐饮从 900 砍到 800 */
 const BUDGET_HIST = {};   // [vZC001.013] 历史预算已清空
-/* 本月前 20 天已花的钱:原型不逐笔展示,但计入合计 —— 否则数字对不上历史 */
+/* 本月前 20 天已花的钱:明细不逐笔展示,但计入合计 —— 否则数字对不上历史 */
 const BASE_BY_MONTH = {};   // [vZC001.013] 月度存量已清空
 
 /* ---------- 账户:记账的骨架 ----------
@@ -2139,7 +2015,7 @@ const flowOf = (k, bk) => inMonth(k).concat(planRows(k))
    而且索引会过期 —— 这张表在你改完一笔账之后就已经是错的了。
    ===================================================================== */
 let Q = { s:'', scope:'all', type:'all', view:'tx', from:'flow' };
-/* 常用词:搜过一次就记住。原型不做持久化,但排序按「这个月你点过几次」 */
+/* 常用词:搜过一次就记住。历史词不持久化,但排序按「这个月你点过几次」 */
 let Q_HIST = [];   // [vZC001.013] 搜索历史已清空
 
 function qEsc(s){
@@ -2876,7 +2752,7 @@ function renderFlow(){
     box.innerHTML = !hasTx(k) ? archiveHTML(k)
       : '<div class="card">' + (bs > 0
           ? emptyHTML('明细从 21 号开始', '这个月前 20 天花掉 ¥' + money(bs) +
-              '，只留合计 —— 这段原型没有逐笔编，编了你也对不上账')
+              '，只留合计 —— 这段没有逐笔数据，只留合计才对得上账')
           : emptyHTML('这个月还没流水', '补记一笔,或者从账单导入')) + '</div>';
     return;
   }
@@ -4543,7 +4419,6 @@ function go(id){
   document.querySelectorAll('.tabbar button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
   document.querySelectorAll('.tabbar').forEach(t => t.style.display = tabs.includes(id) ? 'flex' : 'none');
   document.querySelector('.fab').style.display = (id === 'flow' || id === 'assets') ? 'flex' : 'none';
-  document.querySelectorAll('.switcher button').forEach(b => b.classList.toggle('on', b.dataset.go === id));
   document.getElementById('bar-item').classList.toggle('on', id === 'item');
   document.getElementById('bar-card').classList.toggle('on', id === 'card');
   const ib = document.getElementById('impBar');
@@ -4555,14 +4430,6 @@ function go(id){
   el && (el.scrollTop = 0);
 }
 
-document.querySelectorAll('.switcher button').forEach(b => b.onclick = () => {
-  const id = b.dataset.go;
-  /* 这两页的内容是算出来的,不是静态的 —— 直接切过去会是一片空 */
-  if(id === 'books') openBooks();
-  else if(id === 'close'){ if(!closeId) openClose('jp'); else { renderClose(); go('close'); } }
-  else if(id === 'year') openYear();
-  else go(id);
-});
 document.querySelectorAll('.tabbar button').forEach(b => b.onclick = () => go(b.dataset.tab));
 
 const OUT_CATS = CAT_NAMES('out');
@@ -4659,6 +4526,8 @@ function openSheet(tag, forPost){
   postBook = forPost || null;
   amt = '';
   curIdx = 0;
+  const _nw = document.getElementById('sheetNow');
+  if(_nw) _nw.textContent = '今天 ' + new Date().toTimeString().slice(0,5);
   document.getElementById('amt').textContent = '0';
   document.getElementById('curSym').textContent = '¥';
   document.getElementById('curBtn').textContent = 'CNY';
@@ -5742,7 +5611,7 @@ function famHint(){
         '</div>' +
       '</div>' +
       '<div style="font-size:11px;color:var(--dim);line-height:1.9;padding:12px 4px 0">' +
-        '原型里点右上角的人头可以切到小雅的视角，亲手试试「同一本账，两个人看到的不一样」。' +
+        '点右上角的人头可切换成员视角，同一本账，两个人看到的不一样。' +
       '</div>',
     okTxt: '知道了',
     onOk(){}
@@ -7085,7 +6954,7 @@ function saveShare(){
 
 /* ---------- 第二程:文件不是纯文本 ----------
    ① 编码:微信导出的 CSV 常是 GBK，Excel 另存的常带 BOM。猜错一个字，整列金额都对不上。
-   ② 压缩包:加密 zip 先问密码 —— 但原型不在浏览器里解 zip，只把流程走完，并明说这一点。
+   ② 压缩包:加密 zip 先问密码 —— 但浏览器里不解 zip，只把流程走完，并明说这一点。
    ③ PDF:只认文字层；扫描件是图片，认不出来。
    —— 这三件都不难，难的是失败时说清楚为什么失败。 */
 let impMeta = null;      // {name, size, kind, enc}
@@ -7146,7 +7015,7 @@ function impUnlock(){
   const v = el ? el.value.trim() : '';
   if(v.length < 4){ toast('密码至少 4 位'); return; }
   if(impMeta) impMeta.pwd = v.length;
-  toast('用 ' + v.length + ' 位密码本地解密 · 原型以示例数据代替');
+  toast('用 ' + v.length + ' 位密码本地解密 · 已用示例数据代替');
   impSpecialGo('已用密码解开');
 }
 
@@ -7239,7 +7108,7 @@ function impPassHTML(){
       '</div>' +
       '<button class="imp-gold" style="margin-top:13px" onclick="impUnlock()">本地解锁</button>' +
       '<div style="font-size:10.5px;color:var(--dim);line-height:1.75;margin-top:11px">' +
-        '原型不在浏览器里解真的 zip —— 那得在原生侧做。这一步走完，' +
+        '浏览器里不解真的 zip —— 那得在原生侧做。这一步走完，' +
         '下面用示例账单代替解出来的内容；字段、归类、去重都是真的。</div>' +
     '</div>' +
     '<div style="text-align:center;margin-top:14px">' +
@@ -7259,7 +7128,7 @@ function impPdfHTML(){
     '<div class="card" style="padding:16px;margin-top:10px">' +
       '<div style="font-size:12px;color:var(--muted)">这个文件的判断</div>' +
       '<div style="font-size:11.5px;line-height:1.9;margin-top:6px">' +
-        '有 PDF 头，但原型不做版面还原 —— 用示例数据把后面的流程走完，你看的是「导进来之后」长什么样。</div>' +
+        '有 PDF 头，但这里不做版面还原 —— 用示例数据把后面的流程走完，你看的是「导进来之后」长什么样。</div>' +
       '<button class="imp-gold" style="margin-top:13px" onclick="impSpecialGo(\'文字层可读\')">用示例 PDF 走一遍</button>' +
     '</div>' +
     '<div style="text-align:center;margin-top:14px">' +
@@ -7619,7 +7488,7 @@ function dayRows(d, list){
       写不进去(隐私模式 / 超配额)就静默降级成内存版:宁可这次关掉就没了,
       也不能因为一个 localStorage 把整页搞白。
    ===================================================================== */
-const PKEY = 'youdi.zc001', P_VER = 5;   // [vZC001.013] 换 key + 升版本，隔离旧演示数据缓存
+const PKEY = 'youdi.zc001', P_VER = 5;   // [vZC001.013] 换 key + 升版本，隔离旧版本缓存
 let pTimer = null, pAt = 0;
 
 /* 几个开关也一起存 —— 否则「开了结转」下次打开又变回默认 */
@@ -7698,7 +7567,7 @@ function exportJson(){
   setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   toast('备份已导出 · ' + pSize() + ' KB');
 }
-/* 恢复演示数据不可逆:第一下只上膛,第二下才响 */
+/* 清空所有数据不可逆:第一下只上膛,第二下才响 */
 let resetArm = 0;
 function resetDemo(btn){
   if(!resetArm){
@@ -7988,7 +7857,7 @@ function openAbout(){
     body:
       '<div class="card" style="padding:16px">' +
         '<div style="font-size:15px">有底 · 资产管家</div>' +
-        '<div style="font-size:11px;color:var(--dim);margin-top:4px">vZC001.013 · 2026.11 · 原型</div>' +
+        '<div style="font-size:11px;color:var(--dim);margin-top:4px">vZC001.013 · 2026.11 · 测试版</div>' +
         '<div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.8">' +
           '钱花在哪、东西值多少、下个月还不还得上 —— 心里有底。</div>' +
       '</div>' +
@@ -8003,10 +7872,10 @@ function openAbout(){
       '</div>' +
       '<div style="display:flex;gap:10px;margin-top:12px">' +
         '<button class="btn2" style="flex:1" onclick="exportJson()">导出备份</button>' +
-        '<button class="btn2" style="flex:1;color:var(--up)" onclick="resetDemo(this)">恢复演示数据</button>' +
+        '<button class="btn2" style="flex:1;color:var(--up)" onclick="resetDemo(this)">清空所有数据</button>' +
       '</div>' +
       '<div style="font-size:11px;color:var(--dim);padding:12px 4px 0;line-height:1.8">' +
-        '这个原型没有任何网络请求:所有数字由本地这一份数据算出来,' +
+        '本应用没有任何网络请求:所有数字由本地这一份数据算出来,' +
         '刷新、关页面、明天再开,都是同一份账。</div>',
     onOk(){ toast('有底 vZC001.013'); }
   });
@@ -8039,7 +7908,7 @@ const DEMO_GUARD = {
 if(DEMO_GUARD[h0]){
   const need = DEMO_GUARD[h0];
   const pool = need === '账户' ? ACCTS : need === '家庭成员' ? MEMBERS : BOOKS;
-  if(!pool.length){ toast('演示数据已清空，没有可查看的' + need); h0 = ''; }
+  if(!pool.length){ toast('还没有可查看的' + need); h0 = ''; }
 }
 if(h0 === 'sheet'){ go('home'); openSheet(''); }
 else if(h0 === 'caltoday'){ goCalToday(); }
@@ -8074,7 +7943,7 @@ else if(h0 === 'searchshop'){ openSearch('山姆'); setQView('shop'); }
 else if(h0 === 'searchbig'){ openSearch('>500'); }
 else if(h0 === 'searchnone'){ openSearch('海底捞'); }
 else if(h0 === 'recon'){ openRecon('cc'); }
-else if(h0 === 'reconbad'){ if(!ACCTS.length){ toast('演示数据已清空，没有可核对的账户'); } else { openRecon('cc'); RC.actual = String(acctOf('cc').bal + 20); renderRecon(); } }
+else if(h0 === 'reconbad'){ if(!ACCTS.length){ toast('还没有可核对的账户'); } else { openRecon('cc'); RC.actual = String(acctOf('cc').bal + 20); renderRecon(); } }
 else if(h0 === 'reconok'){ openRecon('cc'); rcSame(); }
 else if(h0 === 'reconcmb'){ openRecon('cmb'); }
 else if(h0 === 'family'){ openFamily(); }
@@ -8117,7 +7986,7 @@ else if(h0 === 'closejp'){ openClose('jp'); }
 else if(h0 === 'closedone'){ openClose('jp'); doCloseBook('jp'); }
 else if(h0 === 'closepost'){
   /* [vZC001.013] 空账本下不再凭空封账+造流水 */
-  if(!BOOKS.some(b => b.id === 'jp')){ toast('演示数据已清空，没有可封账的账本'); }
+  if(!BOOKS.some(b => b.id === 'jp')){ toast('还没有可封账的账本'); }
   else {
     openClose('jp'); doCloseBook('jp');
     addTx({d:TODAY, name:'机场免税店', cat:safeCat('购物'), aid:'cc', amt:186, type:'out', bk:'jp', post:'jp'});
@@ -8140,7 +8009,7 @@ else if(h0 === 'sheetinst'){
   go('home'); openSheet('手机');
   amt = '6799'; document.getElementById('amt').textContent = amt; setInst(12);
 }
-else if(['home','flow','assets','accounts','calendar','profile','item','card','budget','empty','stats','import','search','recon','books','close','year'].includes(h0)){
+else if(['home','flow','assets','accounts','calendar','profile','item','card','budget','stats','import','search','recon','books','close','year'].includes(h0)){
   /* 有内容的详情屏要先渲染再进,否则深链打开是一张白纸 */
   if(h0 === 'books') openBooks();
   else if(h0 === 'year') openYear();
